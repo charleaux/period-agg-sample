@@ -1,0 +1,23 @@
+{
+  "name": "period-agg-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sample.js",
+  "scripts": {
+    "start": "node sample.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charleaux/period-agg-sample.git"
+  },
+  "author": "Charles Torry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charleaux/period-agg-sample/issues"
+  },
+  "homepage": "https://github.com/charleaux/period-agg-sample#readme",
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}
