@@ -8,6 +8,5 @@ module.exports = (start, end) => {
   for (const period of periods) {
     performanceData.push({ id: uuidv4(), measure, period, actual: 1 });
   }
-  //   const one = { id: uuidv4(), measure , period: {startDate: }};
   return performanceData;
 };

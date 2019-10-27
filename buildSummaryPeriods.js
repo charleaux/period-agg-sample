@@ -11,14 +11,12 @@ module.exports = (start, end, unit) => {
     return undefined;
   }
   if (unit !== 'half') {
-    // console.log({
-    //   dateStart: dateStart.format(),
-    //   dateEnd: dateEnd.format(),
-    //   unitOfTime
-    // });
     for (
       let d = dateStart.clone();
-      d.startOf(unitOfTime) <= dateEnd;
+      d
+        .clone()
+        .startOf(unitOfTime)
+        .isSameOrBefore(dateEnd);
       d.add(1, unitOfTime)
     ) {
       const startDate = d
@@ -34,12 +32,6 @@ module.exports = (start, end, unit) => {
         startDate,
         endDate
       };
-      // console.log({
-      //   ...summaryPeriod,
-      //   unitOfTime,
-      //   d: d.format(),
-      //   dateEnd: dateEnd.format()
-      // });
 
       if (
         !summaryPeriods.some(

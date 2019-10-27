@@ -12,15 +12,11 @@ const summaryPeriods = buildSummaryPeriods(
   demoUnitOfTime
 );
 
-// console.log({ summaryPeriods });
 const performanceData = getPerformanceData(demoStartDate, demoEndDate);
 const formatString = 'YYYY-MM-DD';
 
-// console.log(summaryPeriods);
-// console.log(performanceData);
 const summaryPerformanceData = [];
 for (const data of performanceData) {
-  // get the summary period that matches this data
   const summaryPeriod = summaryPeriods.find(
     sp =>
       moment
@@ -36,7 +32,7 @@ for (const data of performanceData) {
     id: undefined
   };
   Object.keys(obj).forEach(key => obj[key] === undefined && delete obj[key]);
-  //   console.log({ obj, data, summaryPeriod, summaryPeriods });
+
   const foundIndex = summaryPerformanceData.findIndex(
     spd =>
       spd.measure.id === obj.measure.id &&
